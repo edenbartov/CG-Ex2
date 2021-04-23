@@ -1,6 +1,7 @@
 package edu.cg.scene.camera;
 
 import edu.cg.UnimplementedMethodException;
+import edu.cg.algebra.Ops;
 import edu.cg.algebra.Point;
 import edu.cg.algebra.Ray;
 import edu.cg.algebra.Vec;
@@ -16,6 +17,7 @@ public class PinholeCamera {
 	double distanceToPlain;
 	double resX;
 	double resY;
+	double pixelSize; // Size (height and width) of a pixel in the image plane
 
 	/**
 	 * Initializes a pinhole camera model with default resolution 200X200 (RxXRy) and view angle 90.
@@ -35,6 +37,7 @@ public class PinholeCamera {
 		resX = 200;
 		resY = 200;
 		planeWidth = 200;
+		pixelSize = planeWidth / resX;
 	}
 
 	/**
@@ -47,6 +50,7 @@ public class PinholeCamera {
 		this.planeWidth = planeWidth;
 		resX = width;
 		resY = height;
+		pixelSize = planeWidth / resX;
 	}
 
 	/**
@@ -56,8 +60,29 @@ public class PinholeCamera {
 	 * @return the middle point of the pixel (x,y) in the model coordinates.
 	 */
 	public Point transform(int x, int y) {
-		// TODO Implement this function
-		throw new UnimplementedMethodException("edu.cg.scene.camera.PinholeCamera.transform(int x, int y)");
+		// Done Implement this function
+		double centerX;
+		double centerY;
+		double tX;
+		double tY;
+		if (resX % 2 == 1){
+			centerX = resX / 2;
+			tX = (x - centerX) * pixelSize;
+		} else {
+			centerX =  Math.floor(resX / 2) - 1;
+			tX = (x - centerX + 0.5) * pixelSize;
+		}
+
+		if (resY % 2 == 1){
+			centerY = resX / 2;
+			tY = (y - centerY) * pixelSize;
+		} else {
+			centerY =  Math.floor(resX / 2) - 1;
+			tY = (y - centerY + 0.5) * pixelSize;
+		}
+
+		Point middleOfPixel = centerPoint.add(tY, upVec).add(tX, rightVec);
+		return middleOfPixel;
 	}
 	
 	/**
