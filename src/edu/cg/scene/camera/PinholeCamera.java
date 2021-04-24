@@ -17,7 +17,6 @@ public class PinholeCamera {
 	double distanceToPlain;
 	double resX;
 	double resY;
-	double pixelSize; // Size (height and width) of a pixel in the image plane
 
 	/**
 	 * Initializes a pinhole camera model with default resolution 200X200 (RxXRy) and view angle 90.
@@ -37,7 +36,6 @@ public class PinholeCamera {
 		resX = 200;
 		resY = 200;
 		planeWidth = 200;
-		pixelSize = planeWidth / resX;
 	}
 
 	/**
@@ -50,7 +48,6 @@ public class PinholeCamera {
 		this.planeWidth = planeWidth;
 		resX = width;
 		resY = height;
-		pixelSize = planeWidth / resX;
 	}
 
 	/**
@@ -67,18 +64,18 @@ public class PinholeCamera {
 		double tY;
 		if (resX % 2 == 1){
 			centerX = resX / 2;
-			tX = (x - centerX) * pixelSize;
+			tX = (x - centerX) * getPixelLength();
 		} else {
 			centerX =  Math.floor(resX / 2) - 1;
-			tX = (x - centerX + 0.5) * pixelSize;
+			tX = (x - centerX + 0.5) * getPixelLength();
 		}
 
 		if (resY % 2 == 1){
 			centerY = resX / 2;
-			tY = (y - centerY) * pixelSize;
+			tY = (y - centerY) * getPixelLength();
 		} else {
 			centerY =  Math.floor(resX / 2) - 1;
-			tY = (y - centerY + 0.5) * pixelSize;
+			tY = (y - centerY + 0.5) * getPixelLength();
 		}
 
 		Point middleOfPixel = centerPoint.add(tY, upVec).add(tX, rightVec);

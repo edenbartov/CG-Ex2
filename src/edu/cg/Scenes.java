@@ -7,6 +7,7 @@ import edu.cg.scene.camera.PinholeCamera;
 import edu.cg.scene.lightSources.CutoffSpotlight;
 import edu.cg.scene.lightSources.DirectionalLight;
 import edu.cg.scene.lightSources.Light;
+import edu.cg.scene.lightSources.PointLight;
 import edu.cg.scene.objects.*;
 
 
@@ -270,6 +271,37 @@ public class Scenes {
 			}
 		}
 		return scene;
+	}
+	public static Scene scene8() {
+		Shape plainShape = new Plain(0, 0.0, 1, 2.5);
+
+		Surface plainSurface = new Surface(plainShape, Materials.getWhiteRubberMaterial());
+
+//		Shape aab1 = new AxisAlignedBox(new Point(-1.5, -1.5, -2.5),
+//				new Point(-0.2, -0.2, -1.5));
+//		Surface sphereSurface1 = new Surface(aab1, Materials.getGoldMaterial());
+//
+//		Shape aab2 = new AxisAlignedBox(new Point(0.1, -1., -2.5),
+//				new Point(1.1, 0.0, -0.4));
+//		Surface sphereSurface2 = new Surface(aab2, Materials.getRedPlasticMaterial());
+
+		Light pointLight = new PointLight()
+				.initPosition(new Point(0, 0, 1.5))
+				.initIntensity(new Vec(0.5, 0.0, 0.0));
+//		Light dirLight = new DirectionalLight()
+//				.initDirection(new Vec(0, 0.1, -1))
+//				.initIntensity(new Vec(1.0, 1.0, 1.0));
+
+		return new Scene()
+				.initAmbient(new Vec(0.1, 0.2, 0.3))
+				.initCamera(new Point(0, 0, 4), new Vec(0,0,-1),new Vec(0.0, 1.0, 0.0), 4.0)
+//				.addLightSource(dirLight)
+				.addLightSource(pointLight)
+				.addSurface(plainSurface)
+//				.addSurface(sphereSurface1)
+//				.addSurface(sphereSurface2)
+				.initName("scene8")
+				.initAntiAliasingFactor(1);
 	}
 
 }
