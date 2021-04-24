@@ -71,7 +71,7 @@ public class CutoffSpotlight extends PointLight {
 		// DONE Implement:
 		Vec normalizedDirection = this.direction.normalize();
 		// the cos of the angle between the negative directional vector to the light and the spot direction
-		double cosGamma = rayToLight.direction().neg().dot(normalizedDirection);
+		double cosGamma = rayToLight.direction().dot(normalizedDirection.neg());
 		if (!isInCutOff(cosGamma) || cosGamma < Ops.epsilon) {
 			return new Vec();
 		}

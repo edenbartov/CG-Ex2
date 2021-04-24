@@ -78,7 +78,7 @@ public class PinholeCamera {
 			tY = (y - centerY + 0.5) * getPixelLength();
 		}
 
-		Point middleOfPixel = centerPoint.add(tY, upVec).add(tX, rightVec);
+		Point middleOfPixel = centerPoint.add(-tY, upVec).add(tX, rightVec);
 		return middleOfPixel;
 	}
 	

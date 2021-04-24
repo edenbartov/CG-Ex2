@@ -196,7 +196,7 @@ public class Scene {
 	private Vec calcColor(Ray ray, int recursionLevel) {
 		// TODO: implement this method to support ray tracing
 		// 		This is the first call to ray ray-tracing
-
+		// TODO: add reflection
 		// calculate the nearest hit of the ray
 		Hit minHit = getFirstHit(ray);
 		if (minHit == null) {
@@ -208,14 +208,15 @@ public class Scene {
 		} else {
 			Point hitPoint = ray.getHittingPoint(minHit);
 			Surface hitSurface = minHit.getSurface();
-			Vec hitColor = hitSurface.Ka();
-			hitColor = hitColor.mult(ambient); // KA* IA
+			color = hitSurface.Ka();
+			color = color.mult(ambient); // KA* IA
 
-			for (Light light: lightSources){
+			for (Light light : lightSources) {
 				Ray rayToLight = light.rayToLight(hitPoint);
 				if (!isOccluded(rayToLight, light)) {
-					color = calcPhongModel(minHit,hitPoint,light,ray,rayToLight,hitColor);
+					color = color.add(calcPhongModel(minHit, hitPoint, light, ray, rayToLight));
 				}
+
 			}
 			return color;
 		}
@@ -263,10 +264,10 @@ public class Scene {
 		return ks.mult(intensity).mult(Math.pow(cosAlpha, shininess));
 	}
 
-	private Vec calcPhongModel(Hit hit, Point hitPoint, Light light, Ray originalRay, Ray rayToLight, Vec hitColor) {
+	private Vec calcPhongModel(Hit hit, Point hitPoint, Light light, Ray originalRay, Ray rayToLight) {
 		Vec intensity = light.intensity(hitPoint, rayToLight); // IL
-		Vec diffuseColor = calcDiffuseColor(hit, rayToLight,intensity);
-		Vec specularColor = calcSpecularColor(hit,originalRay,rayToLight,intensity);
-		return hitColor.add(diffuseColor).add(specularColor);
+		Vec diffuseColor = calcDiffuseColor(hit, rayToLight, intensity);
+		Vec specularColor = calcSpecularColor(hit, originalRay, rayToLight, intensity);
+		return diffuseColor.add(specularColor);
 	}
 }
