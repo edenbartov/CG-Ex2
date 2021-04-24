@@ -59,10 +59,22 @@ public class CutoffSpotlight extends PointLight {
 	public boolean isOccludedBy(Surface surface, Ray rayToLight) {
 		return super.isOccludedBy(surface, rayToLight);
 	}
-	
+
+	private boolean isInCutOff(double cosGamma){
+		double gamma = Math.acos(cosGamma);
+		// Return true iff gamma is smaller than the cutoff angle:
+		return Math.toRadians(cutoffAngle) - gamma >= Ops.epsilon;
+	}
+
 	@Override
 	public Vec intensity(Point hittingPoint, Ray rayToLight) {
-		// TODO Implement:
-		throw new UnimplementedMethodException("edu.cg.scene.lightSources.CutoffSpotlight.intensity()");
+		// DONE Implement:
+		Vec normalizedDirection = this.direction.normalize();
+		// the cos of the angle between the negative directional vector to the light and the spot direction
+		double cosGamma = rayToLight.direction().neg().dot(normalizedDirection);
+		if (!isInCutOff(cosGamma) || cosGamma < Ops.epsilon) {
+			return new Vec();
+		}
+		return super.intensity(hittingPoint, rayToLight).mult(cosGamma);
 	}
 }

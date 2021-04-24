@@ -1,6 +1,7 @@
 package edu.cg.scene.lightSources;
 
 import edu.cg.UnimplementedMethodException;
+import edu.cg.algebra.Hit;
 import edu.cg.algebra.Point;
 import edu.cg.algebra.Ray;
 import edu.cg.algebra.Vec;
@@ -35,19 +36,20 @@ public class DirectionalLight extends Light {
 	
 	@Override
 	public Ray rayToLight(Point fromPoint) {
-		// TODO Implement:
-		throw new UnimplementedMethodException("edu.cg.scene.lightSources.DirectionalLight.rayToLight()");
+		// DONE Implement:
+		return new Ray(fromPoint, direction.neg());
 	}
 
 	@Override
 	public boolean isOccludedBy(Surface surface, Ray rayToLight) {
-		// TODO Implement:
-		throw new UnimplementedMethodException("edu.cg.scene.lightSources.DirectionalLight.isOccludedBy()");
+		// DONE Implement:
+		Hit hit = surface.intersect(rayToLight);
+		return hit != null; // since directional light is always infinitely distant from the scene
 	}
 
 	@Override
 	public Vec intensity(Point hittingPoint, Ray rayToLight) {
-		// TODO Implement:
-		throw new UnimplementedMethodException("edu.cg.scene.lightSources.DirectionalLight.intensity()");
+		// DONE Implement:
+		return this.intensity;
 	}
 }
