@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-// TODO Implement this class which represents an axis aligned box
+// Done Implement this class which represents an axis aligned box
 public class AxisAlignedBox extends Shape{
     private final static int NDIM=3; // Number of dimensions
     private Point a = null;
@@ -52,9 +52,8 @@ public class AxisAlignedBox extends Shape{
         };
         int index = 0;
         for (Vec normal : unitVectors) {
-            for (Point point : new Point[] {a, b}) {
-                faces[index++] = new Plain(normal, point);
-            }
+            faces[index++] = new Plain(normal, a);
+            faces[index++] = new Plain(normal, b);
         }
         return faces;
     }
@@ -68,12 +67,12 @@ public class AxisAlignedBox extends Shape{
      */
     private boolean isPointInBox(Ray ray, Hit hit) {
         Point hitPoint = ray.getHittingPoint(hit);
-        double xPoint = hitPoint.x - Ops.epsilon;
-        double yPoint = hitPoint.y - Ops.epsilon;
-        double zPoint = hitPoint.z - Ops.epsilon;
-        boolean x = a.x <= xPoint && b.x >= xPoint;
-        boolean y = a.y <= yPoint && b.y >= yPoint;
-        boolean z = a.z <= zPoint && b.z >= zPoint;
+        double xPoint = hitPoint.x ;
+        double yPoint = hitPoint.y ;
+        double zPoint = hitPoint.z ;
+        boolean x = a.x <= xPoint + Ops.epsilon && b.x >= xPoint - Ops.epsilon;
+        boolean y = a.y <= yPoint + Ops.epsilon && b.y >= yPoint - Ops.epsilon;
+        boolean z = a.z <= zPoint + Ops.epsilon && b.z >= zPoint - Ops.epsilon;
         return x && y && z;
     }
 
