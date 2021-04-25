@@ -216,7 +216,15 @@ public class Scene {
 				if (!isOccluded(rayToLight, light)) {
 					color = color.add(calcPhongModel(minHit, hitPoint, light, ray, rayToLight));
 				}
+			}
 
+			if (renderReflections) {
+				Vec reflectedVec = Ops.reflect(ray.direction(), minHit.getNormalToSurface());
+				Ray reflectedRay = new Ray (hitPoint, reflectedVec);
+				Vec Kr = new Vec(hitSurface.Kr());
+				Vec newColor = calcColor(reflectedRay, recursionLevel + 1);
+				newColor = newColor.mult(Kr);
+				color = color.add(newColor);
 			}
 			return color;
 		}
