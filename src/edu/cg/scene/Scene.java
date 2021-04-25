@@ -198,36 +198,38 @@ public class Scene {
 		// 		This is the first call to ray ray-tracing
 		// TODO: add reflection
 		// calculate the nearest hit of the ray
+		Vec color = new Vec();
+		if (maxRecursionLevel <= recursionLevel) {
+			return color;
+		}
+
 		Hit minHit = getFirstHit(ray);
 		if (minHit == null) {
 			return backgroundColor;
 		}
-		Vec color = new Vec();
-		if (maxRecursionLevel == recursionLevel) {
-			return color;
-		} else {
-			Point hitPoint = ray.getHittingPoint(minHit);
-			Surface hitSurface = minHit.getSurface();
-			color = hitSurface.Ka();
-			color = color.mult(ambient); // KA* IA
 
-			for (Light light : lightSources) {
-				Ray rayToLight = light.rayToLight(hitPoint);
-				if (!isOccluded(rayToLight, light)) {
-					color = color.add(calcPhongModel(minHit, hitPoint, light, ray, rayToLight));
-				}
-			}
+		Point hitPoint = ray.getHittingPoint(minHit);
+		Surface hitSurface = minHit.getSurface();
+		color = hitSurface.Ka();
+		color = color.mult(ambient); // KA* IA
 
-			if (renderReflections) {
-				Vec reflectedVec = Ops.reflect(ray.direction(), minHit.getNormalToSurface());
-				Ray reflectedRay = new Ray (hitPoint, reflectedVec);
-				Vec Kr = new Vec(hitSurface.Kr());
-				Vec newColor = calcColor(reflectedRay, recursionLevel + 1);
-				newColor = newColor.mult(Kr);
-				color = color.add(newColor);
+		for (Light light : lightSources) {
+			Ray rayToLight = light.rayToLight(hitPoint);
+			if (!isOccluded(rayToLight, light)) {
+				color = color.add(calcPhongModel(minHit, hitPoint, light, ray, rayToLight));
 			}
-			return color;
 		}
+
+		if (renderReflections && hitSurface.isReflecting()) {
+			Vec reflectedVec = Ops.reflect(ray.direction(), minHit.getNormalToSurface());
+			Ray reflectedRay = new Ray (hitPoint, reflectedVec);
+			Vec Kr = new Vec(hitSurface.Kr());
+			Vec newColor = calcColor(reflectedRay, recursionLevel + 1);
+			newColor = newColor.mult(Kr);
+			color = color.add(newColor);
+		}
+		return color;
+
 	}
 
 	private Hit getFirstHit(Ray ray) {
@@ -257,19 +259,19 @@ public class Scene {
 	private Vec calcDiffuseColor(Hit hit, Ray rayToLight, Vec intensity) {
 		Vec normal = hit.getNormalToSurface();
 		Vec L = rayToLight.direction();
-		Vec kd = hit.getSurface().Kd();
+		Vec Kd = hit.getSurface().Kd();
 		double cosTheta = Math.max(normal.dot(L), 0);
-		return kd.mult(intensity).mult(cosTheta);
+		return Kd.mult(intensity).mult(cosTheta);
 	}
 
 	private Vec calcSpecularColor(Hit hit, Ray originalRay, Ray rayToLight, Vec intensity){;
 		Vec normal = hit.getNormalToSurface();
 		Vec L = Ops.reflect(rayToLight.direction().neg(), normal);
 		Vec V = originalRay.direction();
-		Vec ks = hit.getSurface().Ks();
+		Vec Ks = hit.getSurface().Ks();
 		int shininess = hit.getSurface().shininess();
 		double cosAlpha = Math.max(L.dot(V.neg()), 0);
-		return ks.mult(intensity).mult(Math.pow(cosAlpha, shininess));
+		return Ks.mult(intensity).mult(Math.pow(cosAlpha, shininess));
 	}
 
 	private Vec calcPhongModel(Hit hit, Point hitPoint, Light light, Ray originalRay, Ray rayToLight) {
