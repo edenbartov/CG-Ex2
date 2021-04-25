@@ -1,5 +1,6 @@
 package edu.cg.scene.objects;
 
+import edu.cg.Logger;
 import edu.cg.UnimplementedMethodException;
 import edu.cg.algebra.*;
 
@@ -40,58 +41,37 @@ public class Sphere extends Shape {
 	public Hit intersect(Ray ray) {
 		// TODO Implement:
 		Vec sourceToCenter = ray.source().sub(this.center);
-		double a = ray.direction().dot(ray.direction());
-		double b = ray.direction().mult(2).dot(sourceToCenter);
-		double c = sourceToCenter.dot(sourceToCenter) - (this.radius * this.radius);
 
-		double denominator = 2 * a;
-		try {
-			double discriminant = Math.sqrt((b * b) - 4 * a * c);
-			double t;
-			if (discriminant < Ops.epsilon) {
-				t = -b / denominator;
-				if (t < Ops.epsilon || t > Ops.infinity) {
-					return null;
-				}
-				return new Hit(t, ray.add(t).sub(this.center).normalize());
-			}
+		double b = ((ray.direction()).mult(2)).dot(sourceToCenter);
+		double c = (ray.source()).distSqr(this.center) - (this.radius * this.radius);
 
-			double t1 = (-b + discriminant) / denominator;
-			double t2 = (-b - discriminant) / denominator;
-			if (t1 < Ops.epsilon && t2 < Ops.epsilon) {
-				return null;
-			}
-
-			Point point1 = ray.add(t1);
-			Plain plain1 = new Plain(point1.sub(this.center).normalize(), point1);
-
-			Point point2 = ray.add(t2);
-			Plain plain2 = new Plain(point2.sub(this.center).normalize(), point2);
-
-			Hit hit1 = new Hit(t1, plain1.normal());
-			Hit hit2 = new Hit(t2, plain2.normal());
-			return hit1.compareTo(hit1) < 0 ? hit2 : hit1;
-
-		} catch (ArithmeticException e) {
+		double discriminant = (b * b) - (4 * c);
+		if (discriminant < 0) {
 			return null;
 		}
-	}
-
-	private double[] quadratic (double a, double b, double c) throws ArithmeticException {
-		double[] results = new double[2];
-		double denominator = 2 * a;
-		double discriminant = Math.sqrt((b * b) - 4 * a * c);
-		discriminant = discriminant < Ops.epsilon ? 0 : discriminant;
-
-		int index = 0;
-		for (double factor : new double[]{1, -1}) {
-			double numerator = -b + factor * discriminant;
-			results[index] = numerator / denominator;
-			if (results[index] > Ops.infinity) {
+		double root = Math.sqrt(discriminant);
+		double t;
+		if (root < Ops.epsilon) {
+			t = -b / 2;
+			if (t < Ops.epsilon || t > Ops.infinity) {
 				return null;
 			}
-			index++;
+			return new Hit(t, ((ray.add(t)).sub(this.center)).normalize());
 		}
-		return results;
+		double t1 = (-b - root) / 2;
+		double t2 = (-b + root) / 2;
+		if (t1 < Ops.epsilon && t2 < Ops.epsilon) {
+			return null;
+		}
+
+		Point point1 = ray.add(t1);
+		Point point2 = ray.add(t2);
+		Vec normal1 = point1.sub(this.center).normalize();
+		Vec normal2 = point2.sub(this.center).normalize().neg();
+
+		Hit hit1 = new Hit(t1, normal1);
+		Hit hit2 = new Hit(t2, normal2);
+
+		return t1 > Ops.epsilon ? hit1 : hit2;
 	}
 }
