@@ -41,25 +41,36 @@ public class Sphere extends Shape {
 		// TODO Implement:
 		Vec sourceToCenter = ray.source().sub(this.center);
 		double a = ray.direction().dot(ray.direction());
-		double b = 2 * ray.direction().dot(sourceToCenter);
+		double b = ray.direction().mult(2).dot(sourceToCenter);
 		double c = sourceToCenter.dot(sourceToCenter) - (this.radius * this.radius);
 
-		double[] ts;
+		double denominator = 2 * a;
 		try {
-			ts = quadratic(a, b, c);
-			if (ts[0] < Ops.epsilon && ts[1] < Ops.epsilon) {
+			double discriminant = Math.sqrt((b * b) - 4 * a * c);
+			double t;
+			if (discriminant < Ops.epsilon) {
+				t = -b / denominator;
+				if (t < Ops.epsilon || t > Ops.infinity) {
+					return null;
+				}
+				return new Hit(t, ray.add(t).sub(this.center).normalize());
+			}
+
+			double t1 = (-b + discriminant) / denominator;
+			double t2 = (-b - discriminant) / denominator;
+			if (t1 < Ops.epsilon && t2 < Ops.epsilon) {
 				return null;
 			}
 
-			Plain[] hitPlains = new Plain[2];
-			for (int i = 0; i < 2; i++) {
-				Point point = ray.add(ts[i]);
-				Plain plain = new Plain(point.sub(this.center), point);
-				hitPlains[i] = plain;
-			}
-			Hit hit0 = new Hit(ts[0], hitPlains[0].normal());
-			Hit hit1 = new Hit(ts[1], hitPlains[1].normal());
-			return hit0.compareTo(hit1) < 0 ? hit0 : hit1;
+			Point point1 = ray.add(t1);
+			Plain plain1 = new Plain(point1.sub(this.center).normalize(), point1);
+
+			Point point2 = ray.add(t2);
+			Plain plain2 = new Plain(point2.sub(this.center).normalize(), point2);
+
+			Hit hit1 = new Hit(t1, plain1.normal());
+			Hit hit2 = new Hit(t2, plain2.normal());
+			return hit1.compareTo(hit1) < 0 ? hit2 : hit1;
 
 		} catch (ArithmeticException e) {
 			return null;
@@ -75,7 +86,11 @@ public class Sphere extends Shape {
 		int index = 0;
 		for (double factor : new double[]{1, -1}) {
 			double numerator = -b + factor * discriminant;
-			results[index++] = numerator / denominator;
+			results[index] = numerator / denominator;
+			if (results[index] > Ops.infinity) {
+				return null;
+			}
+			index++;
 		}
 		return results;
 	}
