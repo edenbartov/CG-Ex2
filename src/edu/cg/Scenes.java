@@ -289,7 +289,7 @@ public class Scenes {
 
 		scene.initCamera(camera);
 		// Light sources:
-		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, 0.5, -1.0)).initIntensity(new Vec(0.25));
+		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, -0.5, -1.0)).initIntensity(new Vec(0.35));
 		scene.addLightSource(light1);
 		Light light2 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
 				initIntensity(new Vec(.95)).
@@ -309,7 +309,7 @@ public class Scenes {
 
 		// Add plane to simulate ground
 		Shape planeShape = new Plain(0, 0.0, 1.0, 0.0);
-		Surface plainSurface = new Surface(planeShape, Materials.getFancyMaterial());
+		Surface plainSurface = new Surface(planeShape, Materials.getCyanRubberMaterial());
 		scene.addSurface(plainSurface);
 
 		// Add Triangle shape Axis Algined Boxes
