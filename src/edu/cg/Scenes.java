@@ -404,24 +404,24 @@ public class Scenes {
 			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
 			for(int j =0; j< numObjectsPerRow; j++){
 				Sphere sphere = new Sphere(new Point(j*(LENGTH+SPACING)-dx/2,i*(LENGTH+SPACING),1.0),RADIUS);
-				Surface aabsurface = new Surface(sphere, Materials.getRedPlasticMaterial());
+				Surface aabsurface = j==0 || j== numObjectsPerRow -1  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
 				scene.addSurface(aabsurface);
 			}
 		}
 
 		int NEW_NUM_ROWS=9;
 		int [] numObjectsPerRowArr = {NUM_ROWS-1,NUM_ROWS-1,NUM_ROWS-2,NUM_ROWS-3,NUM_ROWS-4,NUM_ROWS-5};
-		int [] removes = {0,1,3,5,7,9};
+		int [] removes = {0,1,2,5,7,9};
 
 		for (int i = NUM_ROWS ; i < NEW_NUM_ROWS; i++){
 			int index = i- NUM_ROWS;
 			int numObjectsPerRow= 2*( numObjectsPerRowArr[index] )+1;
 			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
-			int s = numObjectsPerRow/2 -removes[index];
+			int s = numObjectsPerRow/2 - removes[index];
 			int e = numObjectsPerRow/2 + removes[index];
 			for(int j =0; j< numObjectsPerRow; j++){
 				Sphere sphere = new Sphere(new Point(j*(LENGTH+SPACING)-dx/2,i*(LENGTH+SPACING),1.0),RADIUS);
-				Surface aabsurface = new Surface(sphere, Materials.getRedPlasticMaterial());
+				Surface aabsurface = (i==NEW_NUM_ROWS -1 || j==0 || j == s || j == e || j== numObjectsPerRow -1)  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
 				if (NEW_NUM_ROWS - i >= 3 || j <= s || j >= e ) {
 					scene.addSurface(aabsurface);
 				}
