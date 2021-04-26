@@ -37,6 +37,18 @@ public class Sphere extends Shape {
 		return this;
 	}
 
+	private Hit ClosestHit(double t1, double t2,Ray ray){
+		Point point1 = ray.add(t1);
+		Point point2 = ray.add(t2);
+		Vec normal1 = point1.sub(this.center).normalize();
+		Vec normal2 = point2.sub(this.center).normalize().neg();
+
+		Hit hit1 = new Hit(t1, normal1);
+		Hit hit2 = new Hit(t2, normal2);
+
+		return t1 > Ops.epsilon ? hit1 : hit2;
+	}
+
 	@Override
 	public Hit intersect(Ray ray) {
 		// TODO Implement:
@@ -63,15 +75,7 @@ public class Sphere extends Shape {
 		if (t1 < Ops.epsilon && t2 < Ops.epsilon) {
 			return null;
 		}
-
-		Point point1 = ray.add(t1);
-		Point point2 = ray.add(t2);
-		Vec normal1 = point1.sub(this.center).normalize();
-		Vec normal2 = point2.sub(this.center).normalize().neg();
-
-		Hit hit1 = new Hit(t1, normal1);
-		Hit hit2 = new Hit(t2, normal2);
-
-		return t1 > Ops.epsilon ? hit1 : hit2;
+		return ClosestHit(t1,t2,ray);
 	}
+
 }
