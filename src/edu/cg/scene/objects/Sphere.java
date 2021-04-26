@@ -1,7 +1,5 @@
 package edu.cg.scene.objects;
 
-import edu.cg.Logger;
-import edu.cg.UnimplementedMethodException;
 import edu.cg.algebra.*;
 
 // TODO Implement this class which represents a sphere
@@ -37,7 +35,7 @@ public class Sphere extends Shape {
 		return this;
 	}
 
-	private Hit ClosestHit(double t1, double t2,Ray ray){
+	private Hit closestHit(double t1, double t2, Ray ray){
 		Point point1 = ray.add(t1);
 		Point point2 = ray.add(t2);
 		Vec normal1 = point1.sub(this.center).normalize();
@@ -51,7 +49,7 @@ public class Sphere extends Shape {
 
 	@Override
 	public Hit intersect(Ray ray) {
-		// TODO Implement:
+		// DONE Implement:
 		Vec sourceToCenter = ray.source().sub(this.center);
 
 		double b = ((ray.direction()).mult(2)).dot(sourceToCenter);
@@ -75,7 +73,6 @@ public class Sphere extends Shape {
 		if (t1 < Ops.epsilon && t2 < Ops.epsilon) {
 			return null;
 		}
-		return ClosestHit(t1,t2,ray);
+		return closestHit(t1, t2, ray);
 	}
-
 }

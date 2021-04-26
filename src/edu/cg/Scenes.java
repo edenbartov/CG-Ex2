@@ -272,203 +272,50 @@ public class Scenes {
 		}
 		return scene;
 	}
+
+	/**
+	 * This special scene represents what we think of this course...
+	 * @return surprise
+	 */
 	public static Scene scene8() {
 		// Create basic scene:
 		Scene scene = new Scene()
 				.initName("Scene8")
-				.initRenderReflections(false)
-				.initMaxRecursionLevel(1)
-				.initAmbient(new Vec(1.0))
-				.initAntiAliasingFactor(1);
-		// Camera settings:
-		PinholeCamera camera = new PinholeCamera(new Point(12.0,-12,10), new Vec(-.5,1.0,-.5),new Vec(0,0,1),5);
-		scene.initCamera(camera);
-		// Light sources:
-		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, 0.5, -1.0)).initIntensity(new Vec(0.4));
-		scene.addLightSource(light1);
-		Light light2 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(-2.0, 10.0, 10.0));
-		scene.addLightSource(light2);
-		Light light3 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(2.0, 10.0, 10.0));
-		scene.addLightSource(light3);
-
-		Light light4 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(0.0, 5.0, 10.0));
-		scene.addLightSource(light4);
-
-		// Add plane to simulate ground
-		Shape planeShape = new Plain(0, 0.0, 1.0, 0.0);
-		Surface plainSurface = new Surface(planeShape, Materials.getWhitePlasticMaterial());
-		scene.addSurface(plainSurface);
-
-		// Add Triangle shape Axis Algined Boxes
-		int NUM_ROWS=6;
-		double LENGTH=1.0;
-		double SPACING=0.3;
-		for (int i =0 ; i < NUM_ROWS; i++){
-			int numObjectsPerRow= 2*i+1;
-			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
-			for(int j =0; j< numObjectsPerRow; j++){
-				Point a = new Point(j*(LENGTH+SPACING)-dx/2,
-						i*(LENGTH+SPACING),
-						0.0);
-				Point b = new Point(j*(LENGTH+SPACING)+LENGTH-dx/2,
-						i*(LENGTH+SPACING)+LENGTH,
-						LENGTH);
-				AxisAlignedBox aab = new AxisAlignedBox(a,b);
-				Surface aabsurface = new Surface(aab, Materials.getRandomMaterial());
-				scene.addSurface(aabsurface);
-			}
-		}
-
-		 int NEW_NUM_ROWS=9;
-		 LENGTH=1.0;
-		 SPACING=0.3;
-		 int [] numObjectsPerRowArr = {NUM_ROWS-1,NUM_ROWS-1,NUM_ROWS-2,NUM_ROWS-3,NUM_ROWS-4,NUM_ROWS-5};
-		int [] removes = {0,1,3,5,7,9};
-
-		for (int i = NUM_ROWS ; i < NEW_NUM_ROWS; i++){
-			int index = i- NUM_ROWS;
-			int numObjectsPerRow= 2*( numObjectsPerRowArr[index] )+1;
-			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
-			int s = numObjectsPerRow/2 -removes[index];
-			int e = numObjectsPerRow/2 + removes[index];
-			for(int j =0; j< numObjectsPerRow; j++){
-				Point a = new Point(j*(LENGTH+SPACING)-dx/2,
-						i*(LENGTH+SPACING),
-						0.0);
-				Point b = new Point(j*(LENGTH+SPACING)+LENGTH-dx/2,
-						i*(LENGTH+SPACING)+LENGTH,
-						LENGTH);
-				AxisAlignedBox aab = new AxisAlignedBox(a,b);
-				Surface aabsurface = new Surface(aab, Materials.getRandomMaterial());
-				if (NEW_NUM_ROWS - i >= 3 || j <= s || j >= e ) {
-					scene.addSurface(aabsurface);
-				}
-			}
-		}
-		return scene;
-	}
-
-	public static Scene scene9() {
-		// Create basic scene:
-		Scene scene = new Scene()
-				.initName("Scene9")
 				.initRenderReflections(true)
 				.initMaxRecursionLevel(8)
 				.initAmbient(new Vec(1.0));
 		// Camera settings:
-		PinholeCamera camera = new PinholeCamera(new Point(11.0,-12.0,15), new Vec(-.4,.7,-.5),new Vec(0,0,1),4);
-// PinholeCamera camera = new PinholeCamera(	new Point(0, 5, 12), new Vec(0,0,-1),new Vec(0.0, 1.0, 0.0), 1.0);
+		PinholeCamera camera = new PinholeCamera(new Point(14.0,-12.0,18), new Vec(-.4,.7,-0.5),new Vec(0,0,1),4);
 
 		scene.initCamera(camera);
 		// Light sources:
-		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, 0.5, -1.0)).initIntensity(new Vec(0.4));
+		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, 0.5, -1.0)).initIntensity(new Vec(0.25));
 		scene.addLightSource(light1);
 		Light light2 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
+				initIntensity(new Vec(.95)).
 				initCutoffAngle(45).
-				initPosition(new Point(-2.0, 10.0, 10.0));
+				initPosition(new Point(-3.0, 11.0, 10.0));
 		scene.addLightSource(light2);
 		Light light3 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
+				initIntensity(new Vec(.95)).
 				initCutoffAngle(45).
-				initPosition(new Point(2.0, 10.0, 10.0));
+				initPosition(new Point(3.0, 11.0, 10.0));
 		scene.addLightSource(light3);
-
 		Light light4 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
+				initIntensity(new Vec(.95)).
 				initCutoffAngle(45).
-				initPosition(new Point(0.0, 5.0, 10.0));
+				initPosition(new Point(0.0, 6.0, 10.0));
 		scene.addLightSource(light4);
 
 		// Add plane to simulate ground
 		Shape planeShape = new Plain(0, 0.0, 1.0, 0.0);
-		Surface plainSurface = new Surface(planeShape, Materials.getWhitePlasticMaterial());
+		Surface plainSurface = new Surface(planeShape, Materials.getFancyMaterial());
 		scene.addSurface(plainSurface);
 
 		// Add Triangle shape Axis Algined Boxes
 		int NUM_ROWS=6;
-		double LENGTH=1.7;
-		double RADIUS = .8;
-		double SPACING=.2;
-		for (int i =0 ; i < NUM_ROWS; i++){
-			int numObjectsPerRow= 2*i+1;
-			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
-			for(int j =0; j< numObjectsPerRow; j++){
-				Sphere sphere = new Sphere(new Point(j*(LENGTH+SPACING)-dx/2,i*(LENGTH+SPACING),3.0),RADIUS);
-				Surface aabsurface = j==0 || j== numObjectsPerRow -1  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
-				scene.addSurface(aabsurface);
-			}
-		}
-
 		int NEW_NUM_ROWS=9;
-		int [] numObjectsPerRowArr = {NUM_ROWS-1,NUM_ROWS-1,NUM_ROWS-2,NUM_ROWS-3,NUM_ROWS-4,NUM_ROWS-5};
-		int [] removes = {0,1,2,5,7,9};
 
-		for (int i = NUM_ROWS ; i < NEW_NUM_ROWS; i++){
-			int index = i- NUM_ROWS;
-			int numObjectsPerRow= 2*( numObjectsPerRowArr[index] )+1;
-			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
-			int s = numObjectsPerRow/2 - removes[index];
-			int e = numObjectsPerRow/2 + removes[index];
-			for(int j =0; j< numObjectsPerRow; j++){
-				Sphere sphere = new Sphere(new Point(j*(LENGTH+SPACING)-dx/2,i*(LENGTH+SPACING),3.0),RADIUS);
-				Surface aabsurface = (i==NEW_NUM_ROWS -1 || j==0 || j == s || j == e || j== numObjectsPerRow -1)  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
-				if (NEW_NUM_ROWS - i >= 3 || j <= s || j >= e ) {
-					scene.addSurface(aabsurface);
-				}
-			}
-		}
-
-		return scene;
-	}
-	public static Scene scene10() {
-		// Create basic scene:
-		Scene scene = new Scene()
-				.initName("Scene10")
-				.initRenderReflections(true)
-				.initMaxRecursionLevel(8)
-				.initAmbient(new Vec(1.0));
-		// Camera settings:
-		PinholeCamera camera = new PinholeCamera(new Point(11.0,-12.0,15), new Vec(-.4,.7,-.5),new Vec(0,0,1),4);
-// PinholeCamera camera = new PinholeCamera(	new Point(0, 5, 12), new Vec(0,0,-1),new Vec(0.0, 1.0, 0.0), 1.0);
-
-		scene.initCamera(camera);
-		// Light sources:
-		Light light1 = new DirectionalLight().initDirection(new Vec(0.0, 0.5, -1.0)).initIntensity(new Vec(0.4));
-		scene.addLightSource(light1);
-		Light light2 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(-2.0, 10.0, 10.0));
-		scene.addLightSource(light2);
-		Light light3 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(2.0, 10.0, 10.0));
-		scene.addLightSource(light3);
-
-		Light light4 = new CutoffSpotlight().initDirection(new Vec(0.0, 0.0, -1.0)).
-				initIntensity(new Vec(.8)).
-				initCutoffAngle(45).
-				initPosition(new Point(0.0, 5.0, 10.0));
-		scene.addLightSource(light4);
-
-		// Add plane to simulate ground
-		Shape planeShape = new Plain(0, 0.0, 1.0, 0.0);
-		Surface plainSurface = new Surface(planeShape, Materials.getCyanRubberMaterial());
-		scene.addSurface(plainSurface);
-
-		// Add Triangle shape Axis Algined Boxes
-		int NUM_ROWS=6;
 		double LENGTH=1.7;
 		double RADIUS = .8;
 		double SPACING=.2;
@@ -476,58 +323,60 @@ public class Scenes {
 			int numObjectsPerRow= 2*i+1;
 			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
 			for(int j =0; j< numObjectsPerRow; j++){
-				Point a = new Point(j*(LENGTH+SPACING)-dx/2,
-						i*(LENGTH+SPACING),
-						0.0);
-				Point b = new Point(j*(LENGTH+SPACING)+LENGTH-dx/2,
-						i*(LENGTH+SPACING)+LENGTH,
-						LENGTH);
-				Vec ab =  new Vec(b.sub(a));
-				Point c = a.add( ab.mult(.5));
-				c = c.add(new Vec(0,0,LENGTH));
-				Sphere sphere = new Sphere(c,RADIUS);
-				Surface aabsurface = j==0 || j== numObjectsPerRow -1  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
-
-				AxisAlignedBox aab = new AxisAlignedBox(a,b);
-				Surface box = new Surface(aab, Materials.getMirrorMaterial());
-				scene.addSurface(aabsurface);
+								Shape[] shapes =  makeObject(LENGTH, SPACING, RADIUS, dx, i, j, numObjectsPerRow,
+										NEW_NUM_ROWS);
+				Surface box = new Surface(shapes[0], Materials.getMagentaMirrorMaterial());
+				Surface sphere = ( j == 0 || j == numObjectsPerRow - 1) ?
+						new Surface(shapes[1], Materials.getRedPlasticMaterial()):
+						new Surface(shapes[1], Materials.getRedMirrorMaterial());
+				scene.addSurface(sphere);
 				scene.addSurface(box);
 			}
 		}
 
-		int NEW_NUM_ROWS=9;
-		int [] numObjectsPerRowArr = {NUM_ROWS-1,NUM_ROWS-1,NUM_ROWS-2,NUM_ROWS-3,NUM_ROWS-4,NUM_ROWS-5};
-		int [] removes = {0,1,2,5,7,9};
+		int[] numObjectsPerRowArr = {NUM_ROWS - 1, NUM_ROWS - 1 ,NUM_ROWS - 2, NUM_ROWS - 3, NUM_ROWS - 4, NUM_ROWS - 5};
+		int[] removes = {0, 1, 2, 5, 7, 9};
 
 		for (int i = NUM_ROWS ; i < NEW_NUM_ROWS; i++){
 			int index = i- NUM_ROWS;
-			int numObjectsPerRow= 2*( numObjectsPerRowArr[index] )+1;
+			int numObjectsPerRow= 2 * ( numObjectsPerRowArr[index] ) + 1;
 			double dx=numObjectsPerRow*(LENGTH+SPACING)-SPACING;
 			int s = numObjectsPerRow/2 - removes[index];
 			int e = numObjectsPerRow/2 + removes[index];
-			for(int j =0; j< numObjectsPerRow; j++){
-				Point a = new Point(j*(LENGTH+SPACING)-dx/2,
-						i*(LENGTH+SPACING),
-						0.0);
-				Point b = new Point(j*(LENGTH+SPACING)+LENGTH-dx/2,
-						i*(LENGTH+SPACING)+LENGTH,
-						LENGTH);
-				Vec ab =  new Vec(b.sub(a));
-				Point c = a.add( ab.mult(.5));
-				c = c.add(new Vec(0,0,LENGTH));
-				Sphere sphere = new Sphere(c,RADIUS);
-				AxisAlignedBox aab = new AxisAlignedBox(a,b);
-				Surface box = new Surface(aab, Materials.getMirrorMaterial());
-				Surface aabsurface = (i==NEW_NUM_ROWS -1 || j==0 || j == s || j == e || j== numObjectsPerRow -1)  ? new Surface(sphere, Materials.getRedPlasticMaterial()):  new Surface(sphere, Materials.getRedMirrorMaterial());
+			for(int j = 0; j < numObjectsPerRow; j++){
+				Shape[] shapes =  makeObject(LENGTH, SPACING, RADIUS, dx, i, j, numObjectsPerRow, NEW_NUM_ROWS);
+				Surface box = new Surface(shapes[0], Materials.getMagentaMirrorMaterial());
+				Surface sphere = (i == NEW_NUM_ROWS -1 || j == 0 || j == s|| j == e || j == numObjectsPerRow - 1) ?
+						new Surface(shapes[1], Materials.getRedPlasticMaterial()):
+						new Surface(shapes[1], Materials.getRedMirrorMaterial());
+				// remove unwanted objects
 				if (NEW_NUM_ROWS - i >= 3 || j <= s || j >= e ) {
-					scene.addSurface(aabsurface);
 					scene.addSurface(box);
+					scene.addSurface(sphere);
 				}
 			}
 		}
 
 		return scene;
 	}
+
+
+	private static Shape[] makeObject (double LENGTH, double SPACING, double RADIUS, double dx, int i, int j, int numObjectsPerRow,
+								  int NEW_NUM_ROWS) {
+		Point a = new Point(j * (LENGTH+SPACING) - dx / 2,
+				i*(LENGTH+SPACING),
+				0.0);
+		Point b = new Point(j * (LENGTH + SPACING) + LENGTH - dx / 2,
+				i * (LENGTH+SPACING) + LENGTH,
+				LENGTH);
+		Vec ab =  new Vec(b.sub(a));
+		Point c = a.add( ab.mult(0.5));
+		c = c.add(new Vec(0,0, LENGTH));
+		Sphere sphere = new Sphere(c, RADIUS);
+		AxisAlignedBox aab = new AxisAlignedBox(a, b);
+		return new Shape[] {aab, sphere};
+	}
+
 
 
 }

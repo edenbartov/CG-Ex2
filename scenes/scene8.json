@@ -1,0 +1,6607 @@
+{
+  "name": "Scene8",
+  "maxRecursionLevel": 8,
+  "antiAliasingFactor": 1,
+  "renderRefractions": false,
+  "renderReflections": true,
+  "camera": {
+    "cameraPosition": {
+      "x": 14.0,
+      "y": -12.0,
+      "z": 18.0
+    },
+    "centerPoint": {
+      "x": 12.313451914576865,
+      "y": -9.048540850509513,
+      "z": 15.891814893221081
+    },
+    "towardsVec": {
+      "x": -0.42163702135578396,
+      "y": 0.7378647873726218,
+      "z": -0.5270462766947299
+    },
+    "upVec": {
+      "x": -0.2614881801842454,
+      "y": 0.4576043153224294,
+      "z": 0.8498365855987974
+    },
+    "rightVec": {
+      "x": 0.8682431421244593,
+      "y": 0.4961389383568339,
+      "z": -0.0
+    },
+    "planeWidth": 200.0,
+    "distanceToPlain": 4.0,
+    "resX": 200.0,
+    "resY": 200.0
+  },
+  "ambient": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 1.0
+  },
+  "backgroundColor": {
+    "x": 0.0,
+    "y": 0.5,
+    "z": 1.0
+  },
+  "lightSources": [
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.DirectionalLight",
+      "DATA": {
+        "direction": {
+          "x": 0.0,
+          "y": 0.4472135954999579,
+          "z": -0.8944271909999159
+        },
+        "intensity": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.CutoffSpotlight",
+      "DATA": {
+        "direction": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "cutoffAngle": 45.0,
+        "position": {
+          "x": -3.0,
+          "y": 11.0,
+          "z": 10.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 0.95,
+          "y": 0.95,
+          "z": 0.95
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.CutoffSpotlight",
+      "DATA": {
+        "direction": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "cutoffAngle": 45.0,
+        "position": {
+          "x": 3.0,
+          "y": 11.0,
+          "z": 10.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 0.95,
+          "y": 0.95,
+          "z": 0.95
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.CutoffSpotlight",
+      "DATA": {
+        "direction": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "cutoffAngle": 45.0,
+        "position": {
+          "x": 0.0,
+          "y": 6.0,
+          "z": 10.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 0.95,
+          "y": 0.95,
+          "z": 0.95
+        }
+      }
+    }
+  ],
+  "surfaces": [
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Plain",
+        "DATA": {
+          "a": 0.0,
+          "b": 0.0,
+          "c": 1.0,
+          "d": 0.0
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6,
+          "y": 0.2,
+          "z": 1.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 77,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 0.0,
+            "y": 0.85,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.85,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.85,
+            "y": 1.7,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.85,
+            0.0,
+            0.0
+          ],
+          "bAsArray": [
+            0.85,
+            1.7,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.8999999999999995,
+            "y": 2.75,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.7499999999999996,
+            "y": 1.9,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0499999999999996,
+            "y": 3.5999999999999996,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.7499999999999996,
+            1.9,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0499999999999996,
+            3.5999999999999996,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 2.220446049250313E-16,
+            "y": 2.75,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8499999999999996,
+            "y": 1.9,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8500000000000001,
+            "y": 3.5999999999999996,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8499999999999996,
+            1.9,
+            0.0
+          ],
+          "bAsArray": [
+            0.8500000000000001,
+            3.5999999999999996,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.9000000000000004,
+            "y": 2.75,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.0500000000000003,
+            "y": 1.9,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.7500000000000004,
+            "y": 3.5999999999999996,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.0500000000000003,
+            1.9,
+            0.0
+          ],
+          "bAsArray": [
+            2.7500000000000004,
+            3.5999999999999996,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.8000000000000003,
+            "y": 4.65,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.65,
+            "y": 3.8,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.95,
+            "y": 5.5,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.65,
+            3.8,
+            0.0
+          ],
+          "bAsArray": [
+            -2.95,
+            5.5,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9000000000000006,
+            "y": 4.65,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.7500000000000004,
+            "y": 3.8,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0500000000000007,
+            "y": 5.5,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.7500000000000004,
+            3.8,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0500000000000007,
+            5.5,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -4.440892098500626E-16,
+            "y": 4.65,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8500000000000005,
+            "y": 3.8,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8499999999999996,
+            "y": 5.5,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8500000000000005,
+            3.8,
+            0.0
+          ],
+          "bAsArray": [
+            0.8499999999999996,
+            5.5,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.899999999999999,
+            "y": 4.65,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.049999999999999,
+            "y": 3.8,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.749999999999999,
+            "y": 5.5,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.049999999999999,
+            3.8,
+            0.0
+          ],
+          "bAsArray": [
+            2.749999999999999,
+            5.5,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 4.65,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 3.8,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 5.5,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            3.8,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            5.5,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.55,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.55,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.8000000000000003,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.65,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.95,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.65,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -2.95,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.75,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0499999999999998,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.75,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0499999999999998,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -4.440892098500626E-16,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8500000000000005,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8499999999999996,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8500000000000005,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            0.8499999999999996,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.8999999999999995,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.0499999999999998,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.749999999999999,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.0499999999999998,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            2.749999999999999,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.8,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.95,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.6499999999999995,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.95,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            4.6499999999999995,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999998,
+            "y": 6.549999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.849999999999999,
+            "y": 5.699999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999998,
+            "y": 7.3999999999999995,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.849999999999999,
+            5.699999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999998,
+            7.3999999999999995,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -7.6,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -8.45,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": -6.749999999999999,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -8.45,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            -6.749999999999999,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.549999999999999,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.549999999999999,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.7999999999999994,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.6499999999999995,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.9499999999999993,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.6499999999999995,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            -2.9499999999999993,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.75,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0499999999999998,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.75,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0499999999999998,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 0.0,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8499999999999996,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8499999999999996,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8499999999999996,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            0.8499999999999996,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.9000000000000004,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.0500000000000007,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.75,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.0500000000000007,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            2.75,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999999,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.85,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999999,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.85,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999999,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 7.6,
+            "y": 8.45,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 6.75,
+            "y": 7.6,
+            "z": 0.0
+          },
+          "b": {
+            "x": 8.45,
+            "y": 9.299999999999999,
+            "z": 1.7
+          },
+          "aAsArray": [
+            6.75,
+            7.6,
+            0.0
+          ],
+          "bAsArray": [
+            8.45,
+            9.299999999999999,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -9.5,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -10.35,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": -8.65,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -10.35,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            -8.65,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -7.6,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -8.45,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": -6.75,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -8.45,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            -6.75,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.55,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.55,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.8000000000000003,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.65,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.95,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.65,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            -2.95,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9000000000000004,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.75,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0500000000000007,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.75,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0500000000000007,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 0.0,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8499999999999996,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8499999999999996,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8499999999999996,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            0.8499999999999996,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.8999999999999986,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.049999999999999,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.7499999999999982,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.049999999999999,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            2.7499999999999982,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999999,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.85,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999999,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.85,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999999,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 7.599999999999998,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 6.749999999999998,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 8.449999999999998,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            6.749999999999998,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            8.449999999999998,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 9.5,
+            "y": 10.35,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 8.65,
+            "y": 9.5,
+            "z": 0.0
+          },
+          "b": {
+            "x": 10.35,
+            "y": 11.2,
+            "z": 1.7
+          },
+          "aAsArray": [
+            8.65,
+            9.5,
+            0.0
+          ],
+          "bAsArray": [
+            10.35,
+            11.2,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -10.35,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -8.65,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -10.35,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -8.65,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -9.5,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -8.45,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -6.75,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -8.45,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -6.75,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -7.6,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.55,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.55,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.65,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.95,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.65,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -2.95,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.8000000000000003,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.75,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0500000000000007,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.75,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0500000000000007,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9000000000000004,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -0.8499999999999996,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 0.8499999999999996,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -0.8499999999999996,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            0.8499999999999996,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 0.0,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.049999999999999,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.7499999999999982,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.049999999999999,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            2.7499999999999982,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.8999999999999986,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.85,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999999,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.85,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999999,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999999,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 6.749999999999998,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 8.449999999999998,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            6.749999999999998,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            8.449999999999998,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 7.599999999999998,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 8.65,
+            "y": 11.399999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 10.35,
+            "y": 13.099999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            8.65,
+            11.399999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            10.35,
+            13.099999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 9.5,
+            "y": 12.249999999999998,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -10.35,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -8.65,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -10.35,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -8.65,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -9.5,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -8.45,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -6.75,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -8.45,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -6.75,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -7.6,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.55,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.55,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.65,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.95,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.65,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -2.95,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.8000000000000003,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -2.75,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": -1.0500000000000007,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -2.75,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            -1.0500000000000007,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -1.9000000000000004,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 1.049999999999999,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 2.7499999999999982,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            1.049999999999999,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            2.7499999999999982,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 1.8999999999999986,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.85,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999999,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.85,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999999,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999999,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 6.749999999999998,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 8.449999999999998,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            6.749999999999998,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            8.449999999999998,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 7.599999999999998,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.5,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.7,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 8.65,
+            "y": 13.299999999999999,
+            "z": 0.0
+          },
+          "b": {
+            "x": 10.35,
+            "y": 14.999999999999998,
+            "z": 1.7
+          },
+          "aAsArray": [
+            8.65,
+            13.299999999999999,
+            0.0
+          ],
+          "bAsArray": [
+            10.35,
+            14.999999999999998,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 9.5,
+            "y": 14.149999999999999,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -8.45,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": -6.749999999999999,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -8.45,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            -6.749999999999999,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -7.6,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -6.549999999999999,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": -4.85,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -6.549999999999999,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            -4.85,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -5.699999999999999,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": -4.6499999999999995,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": -2.9499999999999993,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            -4.6499999999999995,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            -2.9499999999999993,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": -3.7999999999999994,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 2.9499999999999993,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": 4.649999999999999,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            2.9499999999999993,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            4.649999999999999,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 3.799999999999999,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 4.85,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": 6.549999999999999,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            4.85,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            6.549999999999999,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 5.699999999999999,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedBox",
+        "DATA": {
+          "a": {
+            "x": 6.75,
+            "y": 15.2,
+            "z": 0.0
+          },
+          "b": {
+            "x": 8.45,
+            "y": 16.9,
+            "z": 1.7
+          },
+          "aAsArray": [
+            6.75,
+            15.2,
+            0.0
+          ],
+          "bAsArray": [
+            8.45,
+            16.9,
+            1.7
+          ]
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.0
+        },
+        "shininess": 77,
+        "isReflecting": true,
+        "Kr": {
+          "x": 0.9,
+          "y": 0.9,
+          "z": 0.7
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Sphere",
+        "DATA": {
+          "center": {
+            "x": 7.6,
+            "y": 16.049999999999997,
+            "z": 2.55
+          },
+          "radius": 0.8
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Kd": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Ks": {
+          "x": 0.7,
+          "y": 0.6,
+          "z": 0.6
+        },
+        "shininess": 32,
+        "isReflecting": false,
+        "Kr": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "isTransparent": false,
+        "Kt": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "refractionIndex": 1.5
+      }
+    }
+  ]
+}

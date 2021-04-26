@@ -74,6 +74,17 @@ public class Materials {
         return redPlasticMaterial;
     }
 
+    public static Material getFancyMaterial(){
+        Material fancyMaterial = new Material();
+        fancyMaterial.initKa(new Vec(0.6, 0.2, 1))
+                .initKd(new Vec(0.5, 0.0, 0.0))
+                .initKs(new Vec(0.7, 0.6, 0.6))
+                .initShininess(77)
+                .initIsTransparent(false)
+                .initIsReflecting(false);
+        return fancyMaterial;
+    }
+
     public static Material getGreenPlasticMaterial(){
         Material greenPlasticMaterial = new Material();
         greenPlasticMaterial.initKa(new Vec(0.0, 0.4, 0.0))
